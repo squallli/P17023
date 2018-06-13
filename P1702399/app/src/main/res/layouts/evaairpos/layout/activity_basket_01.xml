@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorEVA"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="Basket"
+                android:textColor="@color/colorText"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/titleLine"
+            android:layout_width="fill_parent"
+            android:layout_height="8dp"
+            android:layout_below="@+id/titleText"
+            android:background="#1CB074" />
+
+
+        <RelativeLayout
+            android:id="@+id/rowQuery01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/titleLine"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextSeatNum"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:hint="@string/edittext_seat_no_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewSeatNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:text="Seat No.:"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/editTextSeatNum"
+                android:text="crew"
+                android:textColor="@color/colorText"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageViewSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/checkBox"
+                android:maxHeight="80dp"
+                android:maxWidth="80dp"
+                android:src="@drawable/icon_basket" />
+
+            <EditText
+                android:id="@+id/editItemNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/imageViewSearch"
+                android:hint="@string/edittext_item_no"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rowText01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rowQuery01"
+            android:background="#595758"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="160dp"
+                android:gravity="center"
+                android:text="Item Info"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="34dp"
+                android:layout_toRightOf="@+id/tag1"
+                android:gravity="center"
+                android:text="Stock"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/tag2"
+                android:gravity="center"
+                android:text="Qty"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="750dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/row02"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rowText01"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.1"
+            android:maxHeight="80dp"
+            android:maxWidth="80dp"
+            android:src="@drawable/icon_scan" />
+
+
+        <tw.com.regalscan.component.SwipeListView
+            android:id="@+id/lvItemList"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rowText01"
+            android:divider="@null" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rowText01"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/row02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lvItemList"
+            android:background="@color/colorLightGreen">
+
+            <Spinner
+                android:id="@+id/spinner01"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="23dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_toEndOf="@+id/spinner01">
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toStartOf="@+id/txtMoney"
+                    android:text="Total:"
+                    android:textColor="@color/colorEVAGreen"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorLightGreen"
+                    android:text="US 0"
+                    android:textColor="@color/colorEVAGreen"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rowBtn03"
+            android:layout_below="@+id/row02"
+            android:background="@color/colorLightGreen"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="#666" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:gravity="left"
+                    android:text="Discount Info"
+                    android:textColor="@color/colorEVAGreen"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imgDiscountPlus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30dp"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:src="@drawable/icon_discount_plus" />
+
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/discountList"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:divider="@color/colorEVAGreen" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rowBtn03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_back"
+                android:scaleType="centerCrop"
+                android:text="Return"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_btn_text"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/item_bar" />
+
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_back"
+                android:scaleType="centerCrop"
+                android:text="Pay"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_btn_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

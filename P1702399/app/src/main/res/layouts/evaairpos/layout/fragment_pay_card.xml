@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rowtxt04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Credit Card Info"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/colorEVAGreen"
+            android:text="No"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCardNum" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rowtxt05"
+        android:layout_below="@+id/rowtxt04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/colorEVAGreen"
+            android:text="Date"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCardDate" />
+
+
+        <TextView
+            android:textColor="@color/colorEVAGreen"
+            android:text="Type"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCardtype" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/rowtxt06"
+        android:layout_below="@+id/rowtxt05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Currency"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorEVAGreen"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCurrency" />
+
+            <Spinner
+                android:layout_toEndOf="@+id/txtCurrency"
+                android:id="@+id/spinnerCurrency"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Amount"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorEVAGreen"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAmount" />
+
+            <EditText
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txtAmount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editTextAmount" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:text="Pay"
+        android:background="@drawable/selector_btn_back_cor"
+        android:textColor="@drawable/selector_btn_text"
+        android:textAllCaps="false"
+        android:id="@+id/btnPay"
+        android:textSize="20sp"
+        android:layout_below="@+id/rowtxt06"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

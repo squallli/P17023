@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tw.com.regalscan.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorEVA" />
+
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/titleLine"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Connect To Wi-Fi"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/titleLine"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#1CB074" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLine">
+
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+                <TextView
+                    android:id="@+id/txtFlightInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:text="787"
+                    android:textSize="25sp" />
+
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtFlightInfo"
+                    android:layout_margin="5dp"
+                    android:background="#666" />
+
+                <TextView
+                    android:id="@+id/txtConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFlightInfo"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Connect to Wi-Fi"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/switch_row_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtConnect"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_Sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Sync With IFE"
+                        android:textColor="@color/colorText"
+                        android:textSize="25sp" />
+
+                    <Switch
+                        android:id="@+id/switchSync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="10dp"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/switch_row_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/switch_row_01"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Online Transaction"
+                        android:textColor="@color/colorText"
+                        android:textSize="25sp" />
+
+                    <Switch
+                        android:id="@+id/switchOpenTransaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="10dp"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track" />
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/viewLine02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/switch_row_02"
+                    android:layout_margin="5dp"
+                    android:background="#666" />
+
+
+                <TextView
+                    android:id="@+id/txtPushInven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/viewLine02"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Push Inventory to CMI"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/switch_row_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPushInven"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Initialize"
+                        android:textColor="@color/colorText"
+                        android:textSize="25sp" />
+
+                    <Switch
+                        android:id="@+id/switchInit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="10dp"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/switch_row_03"
+                    android:layout_margin="5dp"
+                    android:background="#666" />
+
+                <!--<RelativeLayout-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/switch_row_04"-->
+                <!--android:layout_below="@+id/viewLine03"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_marginBottom="15dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                <!--android:textSize="25sp"-->
+                <!--android:textColor="@color/colorDeleteRed"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="Off-line Mode\n(Training Only)"-->
+                <!--android:layout_height="wrap_content" />-->
+                <!--<Switch-->
+                <!--android:thumb="@drawable/switch_thumb"-->
+                <!--android:track="@drawable/switch_track"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:id="@+id/switchTraining"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+
+                <LinearLayout
+                    android:id="@+id/rowBtn03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnReturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_back"
+                        android:scaleType="centerCrop"
+                        android:text="Return"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/selector_btn_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start">
+                <!--app:headerLayout="@layout/drawer_header" >-->
+                <!--app:menu="@menu/drawer" >-->
+
+                <!-- cacheColorHint：系统默认拖动过程中列表背景是黑的,设置为透明 -->
+                <ExpandableListView
+                    android:id="@+id/expendlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000">
+                    <!--android:layout_marginTop="100dp"-->
+
+                    <!--父項與子項的分隔線-->
+                    <!--android:divider="@drawable/gbt"-->
+                    <!--android:childDivider="@drawable/fij">-->
+                </ExpandableListView>
+            </android.support.design.widget.NavigationView>
+
+
+        </android.support.v4.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+  android:shape="oval">
+
+  <!--thumb屬性指的是：switch上面滑動的滑塊，也就是上圖中的白色圓形滑塊-->
+
+  <size
+    android:width="30dp"
+    android:height="30dp">
+  </size>
+
+  <solid
+    android:color="@color/colorSwitch">
+  </solid>
+
+</shape>

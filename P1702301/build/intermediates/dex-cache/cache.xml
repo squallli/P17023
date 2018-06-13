@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\tp00182.regalscan\Desktop\P17023\P1702301\app\build\intermediates\transforms\desugar\release\0.jar"
+        jumboMode="false"
+        min-sdk-version="22"
+        optimize="true"
+        revision="27.0.3"
+        sha1="3d9255f9b75e30662b672d96757cc6e49aeb6db9">
+        <dex dex="C:\Users\tp00182.regalscan\Desktop\P17023\P1702301\app\build\intermediates\transforms\preDex\release\1\classes.dex" />
+    </item>
+
+</items>

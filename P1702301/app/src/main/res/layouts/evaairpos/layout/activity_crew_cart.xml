@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/colorEVA"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/titleText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:textColor="@color/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Crew Cart"
+            android:textSize="20dp"
+            android:id="@+id/toolbar_title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_below="@+id/titleText"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:id="@+id/titleLine"
+        android:background="#1CB074" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+      android:gravity="center_vertical"
+        android:id="@+id/rowQuery01"
+      android:layout_below="@+id/titleLine"
+      android:layout_alignParentStart="true">
+
+        <EditText
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp"
+            android:hint="@string/edittext_seat_no_hint"
+            android:id="@+id/editTextSeatNum" />
+
+        <CheckBox
+            android:text="crew"
+            android:textColor="@color/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/editTextSeatNum"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="20sp"
+            android:id="@+id/checkBox" />
+
+        <Spinner
+            android:layout_toEndOf="@+id/checkBox"
+            android:id="@+id/spinner02"
+            android:layout_marginEnd="5dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:layout_toEndOf="@+id/spinner02"
+            android:id="@+id/imageViewSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:maxHeight="80dp"
+            android:maxWidth="80dp"
+            android:src="@drawable/icon_basket" />
+
+        <EditText
+            android:imeOptions="actionSearch"
+            android:layout_toEndOf="@+id/imageViewSearch"
+            android:id="@+id/editItemNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:hint="@string/edittext_item_no"
+            android:inputType="number"
+            android:maxLines="1" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowText01"
+        android:orientation="horizontal"
+        android:background="#595758"
+        android:layout_below="@+id/rowQuery01"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="18sp"
+            android:text="Item Info"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="160dp"
+            android:textColor="#fff"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:id="@+id/tag1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/tag1"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_marginRight="34dp"
+            android:text="Stock"
+            android:id="@+id/tag2" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/tag2"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:text="Qty"
+            android:id="@+id/tag3" />
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:alpha="0.5"
+        android:layout_below="@+id/rowText01"
+        android:layout_above="@+id/row02"
+        android:layout_alignParentStart="true"
+        android:layout_width="750dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/icon_scan" />
+
+    <tw.com.regalscan.component.SwipeListView
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:id="@+id/lvItemList"
+        android:divider="@null"
+        android:layout_below="@+id/rowText01"
+        android:layout_alignParentStart="true" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightGreen"
+        android:id="@+id/row02"
+        android:layout_below="@+id/lvItemList"
+        android:layout_alignParentStart="true">
+
+        <Spinner
+            android:id="@+id/spinner01"
+            android:layout_marginStart="23dp"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_toEndOf="@+id/spinner01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Total:"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/colorEVAGreen"
+                android:id="@+id/txtTotal"
+                android:layout_toLeftOf="@+id/txtMoney"
+                android:layout_centerVertical="true"  />
+
+            <TextView
+                android:background="@color/colorLightGreen"
+                android:textColor="@color/colorEVAGreen"
+                android:text="US 0"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/txtMoney"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:background="@color/colorLightGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row02"
+        android:layout_above="@+id/rowBtn03"
+        android:orientation="vertical"
+        android:id="@+id/row03" >
+
+        <View
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/viewLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#666" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Discount Info"
+                android:textColor="@color/colorEVAGreen"
+                android:gravity="left"
+                android:layout_marginStart="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:maxHeight="80dp"
+                android:maxWidth="80dp"
+                android:id="@+id/imgDiscountPlus"
+                android:src="@drawable/icon_discount_plus" />
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/discountList"
+            android:divider="@color/colorEVAGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/rowBtn03" >
+
+        <Button
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return"
+            android:id="@+id/btnReturn"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageView
+            android:src="@drawable/item_bar"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay"
+            android:id="@+id/btnPay"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

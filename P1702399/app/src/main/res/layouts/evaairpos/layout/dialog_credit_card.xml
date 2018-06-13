@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content" >
+
+
+  <RadioGroup
+    android:gravity="center_vertical"
+    android:layout_margin="20dp"
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RadioButton
+      android:id="@+id/radioBtn01"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:text="Credit Card" />
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="30dp"
+      android:layout_below="@+id/radioBtn01"
+      android:id="@+id/imgRow01"
+      android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_visa" />
+
+      <ImageView
+          android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_ae" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="30dp"
+      android:layout_below="@+id/imgRow01"
+      android:id="@+id/imgRow02"
+      android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_jcb" />
+
+      <ImageView
+          android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_master_card" />
+
+    </LinearLayout>
+
+
+    <RadioButton
+      android:id="@+id/radioBtn02"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:textSize="20sp"
+      android:layout_below="@+id/imgRow02"
+      android:text="Union Pay" />
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="30dp"
+      android:layout_below="@+id/radioBtn02"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_cup" />
+
+    </LinearLayout>
+
+  </RadioGroup>
+
+
+</RelativeLayout>

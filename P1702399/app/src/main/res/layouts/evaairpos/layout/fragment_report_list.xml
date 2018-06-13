@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowText01"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:background="@color/colorTextTag">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="Payment List"
+            android:textColor="#fff"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:id="@+id/tag1" />
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_below="@+id/rowText01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lvItemList" />
+
+</RelativeLayout>

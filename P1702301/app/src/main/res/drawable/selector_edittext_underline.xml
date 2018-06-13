@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--沒有焦點時的背景圖片-->
+    <item android:state_window_focused="false">
+        <layer-list>
+
+            <item >
+                <shape>
+                    <solid android:color="#fff" />
+                </shape>
+            </item>
+
+            <item android:bottom="9dp">
+                <shape >
+                    <solid android:color="#000" />
+                </shape>
+            </item>
+
+            <item android:bottom="10dp">
+                <shape>
+                    <solid android:color="#fff" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+    <!-- 獲得焦點時的背景圖片 -->
+    <item android:state_focused="true">
+        <layer-list>
+
+            <item >
+                <shape>
+                    <solid android:color="#fff" />
+                </shape>
+            </item>
+
+            <item android:bottom="8dp">
+                <shape >
+                    <solid android:color="@color/colorEVAGreen" />
+                </shape>
+            </item>
+
+            <item android:bottom="10dp">
+                <shape>
+                    <solid android:color="#fff" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+
+</selector>

@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_menu"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/row01"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_damage"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="Damage"
+            android:paddingTop="50dp"
+            android:textAllCaps="false"
+            android:id="@+id/btnDamage"
+            android:scaleType="centerCrop"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_upgrade"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="Upgrade"
+            android:paddingTop="50dp"
+            android:textAllCaps="false"
+            android:id="@+id/btnUpgrade"
+            android:scaleType="centerCrop"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/row02"
+        android:layout_below="@+id/row01" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_vip_paid"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="VIP Paid"
+            android:paddingTop="50dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:id="@+id/btnVipPaid"
+            android:scaleType="centerCrop" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_vip_sale"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="VIP Sale"
+            android:paddingTop="50dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:id="@+id/btnVipSale"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/row03"
+        android:layout_below="@+id/row02" >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_close"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="Close"
+            android:paddingTop="50dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:id="@+id/btnClose"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_catalog"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="Catalog"
+            android:paddingTop="50dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:id="@+id/btnCatalog"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/row04"
+        android:layout_below="@+id/row03" >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_btn_back_picture"
+            android:textColor="@drawable/selector_btn_text"
+            android:textSize="20sp"
+            android:text="Picture"
+            android:paddingTop="50dp"
+            android:textAllCaps="false"
+            android:id="@+id/btnPicture"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+</RelativeLayout>

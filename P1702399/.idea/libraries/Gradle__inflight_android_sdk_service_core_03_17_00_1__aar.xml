@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: inflight-android-sdk-service-core-03.17.00.1:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/inflight-android-sdk-service-core-03.17.00.1.aar/c765afcc3b2b5a38eb2107194a52d12e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/inflight-android-sdk-service-core-03.17.00.1.aar/c765afcc3b2b5a38eb2107194a52d12e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

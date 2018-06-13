@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "tw.com.regalscan"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName '1.0.42'
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        multiDexEnabled true
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            android.applicationVariants.all {
+                variant ->
+                    variant.outputs.all {
+                        outputFileName = "EVAPOS_V" + "${variant.versionName}" + ".apk"
+                    }
+            }
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res',
+                            'src/main/res/layouts/evaairpos',
+                            'src/main/res/layouts/component',
+                            'src/main/res/layouts/evagroundpos',
+                            'src/main/res/layouts/generic'
+                    ]
+        }
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+    productFlavors {
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation files('libs/platform_sdk_v2.4.0810.jar')
+    implementation files('libs/core-3.3.0.jar')
+    implementation 'joda-time:joda-time:2.9.9'
+    implementation files('libs/IT9000Tools.jar')
+    //    implementation(name: 'inflight-android-sdk-service-creworder-emulator-03.17.00.1', ext: 'aar')
+    //    implementation(name: 'inflight-android-sdk-service-core-emulator-03.17.00.1', ext: 'aar')
+    //    implementation(name: 'inflight-android-sdk-service-crewcart-emulator-03.17.00.1', ext: 'aar')
+    //    implementation(name: 'inflight-android-sdk-service-crewcatalog-emulator-03.17.00.1', ext: 'aar')
+    implementation(name: 'inflight-android-sdk-service-creworder-03.17.00.1', ext: 'aar')
+    implementation(name: 'inflight-android-sdk-service-core-03.17.00.1', ext: 'aar')
+    implementation(name: 'inflight-android-sdk-service-crewcart-03.17.00.1', ext: 'aar')
+    implementation(name: 'inflight-android-sdk-service-crewcatalog-03.17.00.1', ext: 'aar')
+    implementation 'com.github.pwittchen:reactivenetwork-rx2:0.12.2'
+    //support
+    implementation(rootProject.ext.dependencies["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    //tools
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation 'com.alibaba:fastjson:1.2.41'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    //view
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.32'
+    //arms
+    implementation 'me.jessyan:arms:2.4.1'
+    //test
+    implementation rootProject.ext.dependencies["logger"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
+    implementation 'de.idyl:winzipaes:1.0.1'
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.9'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation project(':sqlite_library')
+}

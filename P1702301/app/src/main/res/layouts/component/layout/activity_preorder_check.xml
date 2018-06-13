@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+              android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioGroup
+            android:id="@+id/rgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <RadioButton
+                android:id="@+id/radioCreditCard"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card No.:" />
+
+
+
+            <EditText
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_edittext_underline"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:enabled="false"
+                android:id="@+id/editCreditCard" />
+
+
+            <RadioButton
+                android:id="@+id/radioTravelNum"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Travel Document:" />
+
+
+            <EditText
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_edittext_underline"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/editTravelNum" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/rowBtn03" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="Return"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/btnReturn"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageView
+            android:src="@drawable/item_bar"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="  Ok  "
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/btnOk"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

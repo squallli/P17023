@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#FFFFFF">
+
+  <TextView
+    android:id="@+id/atxtTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:gravity="center"
+    android:text="公告標題"
+    android:textColor="#000000" />
+
+  <TextView
+    android:id="@+id/tv_content"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/atxtTitle"
+    android:gravity="center"
+    android:text="公告文字內容"
+    android:textColor="#000000" />
+
+  <Button
+    android:id="@+id/abtnConfirm"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/tv_content"
+    android:background="@drawable/selector_btn_back"
+    android:text="OK"
+    android:textColor="@drawable/selector_btn_text"
+    android:textSize="20sp" />
+</RelativeLayout>

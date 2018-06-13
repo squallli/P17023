@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/rowtxt04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/colorEVAGreen"
+            android:text="Type"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:layout_marginStart="67dp"
+            android:id="@+id/spinnerCurrency"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rowtxt05"
+        android:layout_below="@+id/rowtxt04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+      android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/colorEVAGreen"
+            android:text="Coupon No"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/editTextCouponNo" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rowtxt06"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/rowtxt05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+            <TextView
+                android:text="Currency"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tag1" />
+
+            <TextView
+                android:textColor="@color/colorEVAGreen"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCurrency" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:text="Amount"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tag2" />
+
+            <TextView
+                android:textColor="@color/colorEVAGreen"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAmount" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:text="Pay"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/selector_btn_back_cor"
+        android:textColor="@drawable/selector_btn_text"
+        android:textAllCaps="false"
+        android:id="@+id/btnPay"
+        android:textSize="20sp"
+        android:layout_below="@+id/rowtxt06"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

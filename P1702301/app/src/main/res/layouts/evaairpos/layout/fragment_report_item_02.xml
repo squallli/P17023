@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/rowText01"
+      android:orientation="horizontal"
+      android:background="@color/colorTextTag">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"
+          android:textSize="14sp"
+          android:text="Item Info"
+          android:layout_marginLeft="8dp"
+          android:textColor="#fff"
+          android:gravity="center"
+          android:id="@+id/tag1" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"
+          android:textSize="14sp"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:text="From"
+          android:id="@+id/tag2"
+          android:layout_marginStart="8dp"
+          android:layout_alignParentTop="true"
+          android:layout_toEndOf="@+id/tag1"/>
+
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"
+          android:textSize="14sp"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:layout_marginLeft="59dp"
+          android:layout_toRightOf="@+id/tag2"
+          android:text="To"
+          android:id="@+id/tag3" />
+
+
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"
+          android:textSize="14sp"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:layout_marginLeft="85dp"
+          android:layout_toRightOf="@+id/tag3"
+          android:text="Qty"
+          android:id="@+id/tag4" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"
+          android:textSize="14sp"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:text="Total"
+          android:layout_alignParentEnd="true"
+          android:layout_marginRight="10dp" />
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_below="@+id/rowText01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lvItemList" />
+
+</RelativeLayout>

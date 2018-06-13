@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="5dip"
+        android:paddingBottom="15dp"
+        android:background="@drawable/shape_item_background">
+
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imgItem"
+            android:background="@drawable/shape_image_background"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/noimage"
+            android:padding="3dp"
+            android:scaleType="fitCenter" />
+
+
+
+        <RelativeLayout
+          android:id="@+id/layout_txtItem_parent"
+          android:layout_centerVertical="true"
+          android:layout_toEndOf="@+id/imgItem"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+            <RelativeLayout
+              android:id="@+id/layout_txtItem"
+              android:layout_centerVertical="true"
+              android:layout_width="220dp"
+              android:layout_height="wrap_content">
+
+                <RelativeLayout
+                  android:id="@+id/layout_ItemTag01"
+                  android:layout_marginBottom="3dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                    <TextView
+                      android:id="@+id/txtMagazineNum"
+                      android:text="D1 - 120"
+                      android:layout_marginLeft="10dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentStart="true"
+                      android:textSize="18sp"
+                      android:textColor="#000000"
+                      android:layout_centerVertical="true" />
+
+                    <RelativeLayout
+                      android:id="@+id/txtMoneyInfo"
+                      android:layout_marginLeft="10dp"
+                      android:layout_toRightOf="@+id/txtMagazineNum"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+                        <TextView
+                          android:id="@+id/txtMoneyType"
+                          android:text="US"
+                          android:layout_toLeftOf="@+id/txtMoney"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textSize="18sp"
+                          android:textColor="#666"
+                          android:layout_marginRight="5dp"
+                          android:layout_centerVertical="true" />
+
+                        <TextView
+                          android:id="@+id/txtMoney"
+                          android:text="123.00"
+                          android:layout_alignParentRight="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textSize="18sp"
+                          android:textColor="#666"
+                          android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/layout_ItemTag01"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                    <TextView
+                      android:id="@+id/txtItemInfo"
+                      android:layout_marginTop="3dp"
+                      android:text="商品名稱"
+                      android:layout_marginLeft="10dp"
+                      android:ellipsize="end"
+                      android:singleLine="true"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:textSize="18sp"
+                      android:textColor="#000000"
+                      android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+              android:id="@+id/txtQty"
+              android:text="123"
+              android:layout_marginLeft="45dp"
+              android:layout_marginRight="18dp"
+              android:textSize="18sp"
+              android:layout_centerVertical="true"
+              android:layout_alignParentRight="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#000000"/>
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+
+
+    <LinearLayout
+        android:id="@+id/row01"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/row02" >
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/row04"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:text="Normal"
+                    android:textColor="@color/colorText"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/txtIdentity" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/row05"
+                android:layout_below="@+id/row04"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:text="AA to BB"
+                    android:textColor="@color/colorText"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:id="@+id/txtFromTo" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:text="US xx"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:id="@+id/txtMoney" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_below="@+id/row05"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="#666" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/row03"
+                android:layout_below="@+id/viewLine"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/txtInfo01" >
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/text02"
+                        android:textSize="20sp"
+                        android:text="Sold Qty"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txtInfo01" >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:background="@drawable/icon_minus"
+                            android:layout_toLeftOf="@+id/txtQty"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/minus02" />
+
+                        <TextView
+                            android:text="123"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:id="@+id/txtQty"
+                            android:textColor="@color/colorText"
+                            android:layout_width="60dp"
+                            android:layout_centerInParent="true"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:background="@drawable/icon_plus"
+                            android:layout_toRightOf="@+id/txtQty"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/plus02" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row01"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/rowBtn03" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="Return"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:id="@+id/btnReturn"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:src="@drawable/item_bar"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:id="@+id/btnAccept"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

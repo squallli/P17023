@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <!--toolbar背景-->
+        <item name="colorPrimary">#EEEEEE</item>
+
+        <!--狀態列-->
+        <item name="colorPrimaryDark">@color/colorEVA</item>
+
+        <!--UI onFocus與常態-->
+        <item name="android:colorControlActivated">@color/colorEVAGreen</item>
+        <item name="android:colorControlNormal">@color/colorTextTag</item>
+
+        <!--btn onFocus與常態-->
+        <!--<item name="android:colorControlHighlight">@color/colorEVAGreen</item>-->
+        <!--<item name="android:colorButtonNormal">@color/colorEVA</item>-->
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:statusBarColor">@color/colorTextTag</item>
+
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+
+    <!-- 定義一個樣式，繼承android系統的對話框樣式 android:style/Theme.Dialog -->
+    <style name="Theme.FloatActivity" parent="android:style/Theme.Dialog">
+        <!-- item_float_box 為我們定義的窗口背景 -->
+        <item name="android:windowBackground">@drawable/item_float_box</item>
+
+    </style>
+
+
+    <style name="ListDialogTheme" parent="android:Theme.Holo.Light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--三個按鈕對齊的dialog-->
+
+    <!--轉場動畫-->
+
+</resources>

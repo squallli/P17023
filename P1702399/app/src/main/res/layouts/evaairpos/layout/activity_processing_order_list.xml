@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tw.com.regalscan.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorEVA" />
+
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/titleLine"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Processing Order List"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/titleLine"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#1CB074" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLine">
+
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+                <RelativeLayout
+                    android:id="@+id/rowQuery01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:text="Seat No : "
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editSeatNum"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/txtTo"
+                        android:hint="@string/edittext_seat_no_hint"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters|textNoSuggestions"
+                        android:maxLines="1"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@+id/editSeatNum"
+                        android:text="crew"
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner01"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rowText01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowQuery01"
+                    android:background="@color/colorTextTag"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="23dp"
+                        android:gravity="center"
+                        android:text="Time(min)"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:id="@+id/tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="42dp"
+                        android:layout_toRightOf="@+id/tag1"
+                        android:gravity="center"
+                        android:text="Seat"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="23dp"
+                        android:gravity="center"
+                        android:text="Amt"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+                <ListView
+                    android:id="@+id/lvItemList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/rowTag01"
+                    android:layout_below="@+id/rowText01" />
+
+                <RelativeLayout
+                    android:id="@+id/rowTag01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rowBtn03"
+                    android:layout_margin="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tag4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Count: "
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtOrderCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tag4"
+                        android:text="0"
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rowBtn03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnReturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_back"
+                        android:scaleType="centerCrop"
+                        android:text="Return"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/selector_btn_text"
+                        android:textSize="20sp" />
+
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/item_bar" />
+
+                    <Button
+                        android:id="@+id/btnEnter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_back"
+                        android:scaleType="centerCrop"
+                        android:text="Enter"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/selector_btn_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start">
+                <!--app:headerLayout="@layout/drawer_header" >-->
+                <!--app:menu="@menu/drawer" >-->
+
+                <!-- cacheColorHint：系统默认拖动过程中列表背景是黑的,设置为透明 -->
+                <ExpandableListView
+                    android:id="@+id/expendlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000">
+                    <!--android:layout_marginTop="100dp"-->
+
+                    <!--父項與子項的分隔線-->
+                    <!--android:divider="@drawable/gbt"-->
+                    <!--android:childDivider="@drawable/fij">-->
+                </ExpandableListView>
+            </android.support.design.widget.NavigationView>
+
+
+        </android.support.v4.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

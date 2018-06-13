@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:text="New update is available now, do you want to start update now?"
+    android:textColor="@color/colorText"
+    android:textSize="20sp" />
+
+  <LinearLayout
+    android:id="@+id/ll_btnlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/btn_cancel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@drawable/selector_btn_back"
+      android:text="Cancel"
+      android:textAllCaps="false"
+      android:textColor="@drawable/selector_btn_text"
+      android:textSize="20sp" />
+
+    <ImageView
+      android:layout_width="1dp"
+      android:layout_height="match_parent"
+      android:src="@drawable/item_bar" />
+
+    <Button
+      android:id="@+id/btn_update"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@drawable/selector_btn_back"
+      android:text="Update"
+      android:textAllCaps="false"
+      android:textColor="@drawable/selector_btn_text"
+      android:textSize="20sp" />
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/btn_update1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView"
+    android:background="@drawable/selector_btn_back"
+    android:text="Update"
+    android:textAllCaps="false"
+    android:textColor="@drawable/selector_btn_text"
+    android:textSize="20sp"
+    android:visibility="invisible" />
+</RelativeLayout>

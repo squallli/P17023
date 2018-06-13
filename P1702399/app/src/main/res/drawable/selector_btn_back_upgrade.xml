@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 當前窗口失去焦點時 -->
+    <!--<item android:color="@android:color/black" android:state_window_focused="false" />-->
+
+    <!-- 按壓時 -->
+    <item
+        android:drawable="@drawable/icon_upgrade_green"
+        android:state_pressed="true" />
+
+    <!-- 被選中時 -->
+    <item
+        android:drawable="@drawable/icon_upgrade_green"
+        android:state_selected="true" />
+
+    <!-- 被激活時 -->
+    <item
+        android:drawable="@drawable/icon_upgrade_green"
+        android:state_activated="true" />
+
+    <!-- 默認時 -->
+    <item
+        android:drawable="@drawable/icon_upgrade_gray" />
+
+</selector>

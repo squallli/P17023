@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">EVAPos</string>
+
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+
+    <string name="Items">Items</string>
+    <string name="Discrepancy">Discrepancy</string>
+    <string name="PreOrder">PreOrder</string>
+    <string name="Vip">Vip</string>
+    
+    <!--折扣畫面提視訊息-->
+    <string name="PRE">Please scan barcode</string>
+
+    <!--錯誤警語-->
+    <string name="Error_EmptySeatNo">Please input seat no.</string>
+    <string name="Error_GetCardTypeError">Card type error</string>
+    <string name="Error_SeatNotAvailable">The seat No. is not available.\r\nPlease cancel current crew cart</string>
+
+    <!--提醒訊息-->
+    <string name="Warning_SeatNo">Please check seat no.</string>
+
+    <!--畫面顯示用-->
+    <string name="Announcement">Announcement</string>
+    <string name="Exit">Exit</string>
+    <string name="IFE_Communication_Error">IFE error</string>
+    <string name="POS_is_now_offline">POS is now offline!</string>
+    <string name="WiFi_reconnect_success">Wifi reconnect success!</string>
+    <string name="Try_Again">Try again?</string>
+    <string name="IFE_Disable">IFE is now disable!</string>
+    <string name="Please_Swipe_or_Tag_Card">Please swipe or tag card</string>
+    <string name="Gift_Cannot_Removed">Gift can not be removed</string>
+    
+    <!--IFE 斷線後顯示訊息-->
+    <string name="IFE_Offline_CrewCart">Please use another POS to finish the payment in \'Deal-In Progress(Crew Cart)\'</string>
+    <string name="IFE_Offline_Processing_Order_List">Please use another POS to finish the payment in \'Deal-In Progress(Processing Order List)\'</string>
+    <string name="IFE_Offline_ReportCP">Please check ALL POS IFE status, report to CP. </string>
+    <string name="IFE_Offline_CompleteOrder_Fail">Please go to CMI and modify the order status to completed! \r\nSeat No: </string>
+    <string name="IFE_CMI_CHANGE_STATUS">Please go to CMI and modify the order status to cancel!</string>
+
+    <string name="update_msg">New update is available now, do you want to start update now?</string>
+
+    <string name="edittext_seat_no_hint"></string>
+    <string name="edittext_item_no"></string>
+
+    <string name="Please_Sync_IFE">Please sync with IFE!</string>
+    <string name="Please_Push_Inventory">Please push inventory!</string>
+    <string name="Processing_Msg">Processing…</string>
+</resources>

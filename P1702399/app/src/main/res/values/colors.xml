@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorGray">#666</color>
+
+    <color name="colorSwitch">#AAA</color>
+    <color name="colorSwitch02">#DDD</color>
+
+
+
+    <color name="colorWhite">#fff</color>
+    <color name="colorEVA">#C9CACA</color>
+    <color name="colorEVAGreen">#1CB074</color>
+    <color name="colorText">#4E4A4B</color>
+    <color name="colorTextTag">#595758</color>
+    <color name="colorDeleteRed">#EE534F</color>
+    <color name="colorLightGreen">#F7FFE8</color>
+
+</resources>

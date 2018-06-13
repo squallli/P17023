@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 當前窗口失去焦點時 -->
+    <!--<item android:color="@android:color/black" android:state_window_focused="false" />-->
+
+    <!-- 不可用時 -->
+    <!--<item android:color="@color/colorWhite" android:state_enabled="false">-->
+        <!--<shape android:shape="rectangle" >-->
+            <!--<corners android:radius="7dip" />-->
+            <!--<gradient android:angle="-90" android:startColor="@color/colorWhite" android:endColor="@color/colorWhite" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <item android:color="@null" android:state_enabled="false">
+        <shape android:shape="rectangle" >
+            <corners android:radius="7dip" />
+            <gradient android:angle="-90" android:startColor="@null" android:endColor="@null" />
+        </shape>
+    </item>
+
+    <!-- 按壓時 -->
+    <item android:color="@color/colorEVAGreen" android:state_pressed="true" >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="7dip" />
+            <gradient android:angle="-90" android:startColor="@color/colorEVAGreen" android:endColor="@color/colorEVAGreen" />
+        </shape>
+    </item>
+
+    <!-- 被選中時 -->
+    <item android:color="@color/colorEVAGreen" android:state_selected="true" >
+        <shape android:shape="rectangle" >
+            <corners android:radius="7dip" />
+            <gradient android:angle="-90" android:startColor="@color/colorEVAGreen" android:endColor="@color/colorEVAGreen" />
+        </shape>
+    </item>
+
+    <!--&lt;!&ndash; 被激活時 &ndash;&gt;-->
+    <!--<item android:color="@color/colorEVAGreen" android:state_activated="true" >-->
+        <!--<shape android:shape="rectangle"  >-->
+            <!--<corners android:radius="7dip" />-->
+            <!--<stroke android:width="1dip" android:color="@color/colorWhite" />-->
+            <!--<gradient android:angle="-90" android:startColor="@color/colorWhite" android:endColor="color/colorEVAGreen"  />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!-- 默認時 -->
+    <item android:color="@color/colorEVA" >
+        <shape android:shape="rectangle" >
+            <corners android:radius="7dip" />
+            <gradient android:angle="-90" android:startColor="@color/colorEVA" android:endColor="@color/colorEVA" />
+        </shape>
+    </item>
+</selector>

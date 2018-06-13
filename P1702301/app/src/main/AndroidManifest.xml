@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.com.regalscan">
+
+    <!-- 設定螢幕關閉時間 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--<uses-permission android:name="android.permission.SET_TIME"/>-->
+
+    <!-- internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 開機啟動 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 相機 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 檔案讀寫 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 震動 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Wifi -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.jess.arms.base.BaseApplication"
+        android:icon="@drawable/icon_launch"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="tw.com.regalscan.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <!-- 開機啟動廣播 -->
+        <receiver android:name=".component.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--偵測網路變化 -->
+        <!--<receiver-->
+        <!--android:name=".utils.NetworkStatusReceiver"-->
+        <!--android:label="NetworkConnection">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+
+        <!-- Main Page -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登入畫面與選單 -->
+        <activity
+            android:name=".evaair.OpenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.MenuActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 庫存調整 -->
+        <activity
+            android:name=".evaair.UpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaair.UpdateCpCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- DFS銷售 -->
+        <activity
+            android:name=".evaair.basket.BasketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.ItemDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".activities.ItemPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".activities.DiscountCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".evaair.basket.PayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- DFS退貨 -->
+        <activity
+            android:name=".evaair.RefundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.RefundDFSActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- VIP Sale退款 -->
+        <activity
+            android:name=".evaair.RefundVSActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 升艙等銷售 -->
+        <activity
+            android:name=".evaair.upgrade.UpgradeActivity01"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.upgrade.UpgradeBasketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.ItemUpgradeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".evaair.upgrade.UpgradePayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 升艙等退貨 -->
+        <activity
+            android:name=".evaair.upgrade.UpgradeRefundActivity01"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.upgrade.UpgradeRefundActivity02"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CPCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+
+        <!-- 庫存轉瑕疵品 -->
+        <activity
+            android:name=".evaair.DamageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 所有商品分類 -->
+        <activity
+            android:name=".evaair.CatalogActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 預訂單取貨 -->
+        <activity
+            android:name=".evaair.preorder.PreorderSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PreorderCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- VIP預訂單取貨 -->
+        <activity
+            android:name=".evaair.preorder.VipPaidActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- VIP預訂單取貨付款 -->
+        <activity
+            android:name=".evaair.preorder.VipSaleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaair.preorder.VipPayActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 商品轉入；轉出、取消轉出 -->
+        <activity
+            android:name=".evaair.transfer.TransferActivity01"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.transfer.TransferInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.transfer.TransferOutActivity01"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaair.transfer.TransferOutActivity02"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.transfer.CancelTransferOutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 報表: DFS銷售、庫存移轉、升艙等 -->
+        <activity
+            android:name=".evaair.report.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.report.ReportSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.report.ReportTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.report.ReportUpgradeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- IFE -->
+        <activity
+            android:name=".evaair.ife.OnlineBasketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaair.ife.IFEActivity01"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.ife.IFEEX2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.ife.IFEEX3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.mvp.ui.activity.BasketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- IFE訂單處理 -->
+        <activity
+            android:name=".evaair.ife.OrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.ife.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".evaair.ife.OrderEditActivity" -->
+        <!-- android:windowSoftInputMode="adjustPan" /> -->
+        <activity
+            android:name=".activities.ItemDetailOnlineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+
+        <!-- IFE Processing訂單處理 -->
+        <activity
+            android:name=".evaair.ife.DealInProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaair.ife.ProcessingOrderListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- <activity android:name=".evaair.ife.ProcessingOrderDetailActivity" /> -->
+        <!-- <activity -->
+        <!-- android:name=".evaair.ife.ProcessingOrderEditActivity" -->
+        <!-- android:windowSoftInputMode="adjustPan" /> -->
+
+
+        <!-- 組員成立的訂單處理 -->
+        <activity
+            android:name=".evaair.ife.CrewCartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 拍照 -->
+        <activity android:name=".evaair.PictureActivity" />
+
+        <!-- GROUND -->
+        <activity
+            android:name=".evaground.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.AnnouncementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".evaground.DownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.ECheckUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.ItemDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".evaground.ItemPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+        <activity
+            android:name=".evaground.RecieptDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />
+
+        <activity
+            android:name=".evaground.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.UploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".evaground.mvp.ui.activity.OfflineDownloadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaground.mvp.ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaground.mvp.ui.activity.MenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".evaground.mvp.ui.activity.CheckUpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>

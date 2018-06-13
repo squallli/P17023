@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:id="@+id/rowQuery02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rowQuery03"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="CP ID:"
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
+
+        <EditText
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:id="@+id/editId"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_edittext_underline"
+            android:layout_alignParentEnd="true"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:textCursorDrawable="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/rowBtn03"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/rowQuery03" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="CP Password:"
+            android:textColor="@color/colorText"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center" />
+
+        <EditText
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_edittext_underline"
+          android:inputType="numberPassword"
+            android:textCursorDrawable="@null"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/editPassword" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/rowBtn03" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="Return"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/btnReturn"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageView
+            android:src="@drawable/item_bar"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_btn_back"
+            android:textColor="@drawable/selector_btn_text"
+            android:text="  Ok  "
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/btnOk"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
